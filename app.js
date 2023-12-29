@@ -8,9 +8,16 @@ clearAllBtn.addEventListener("click", clearAllTasks);
 inputForm.addEventListener("submit", addToDo);
 taskList.addEventListener("click", deleteToDo);
 
-function clearAllTasks(){
-  
+function clearAllTasks() {
+  // Remove all tasks from the DOM
+  while (taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
+  }
+
+  // Clear tasks in local storage
+  localStorage.removeItem("todos");
 }
+
 
 // renders tasks
 function getToDos() {
@@ -67,7 +74,6 @@ function addToDo(e) {
 
   //gets the text inputted
   const inputTaskText = inputBox.value;
-  console.log(inputTaskText);
 
   // creates new list item
   const newListItem = document.createElement("li");
