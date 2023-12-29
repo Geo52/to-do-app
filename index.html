@@ -9,18 +9,19 @@
   </head>
   <body>
     <div class="container">
-      
-      <!-- form to add tasks -->
+      <!-- form to add tasks(input) -->
       <form>
-        <input name="task" type="text" placeholder="add to do..." />
-        <input type="submit" value="submit"/>
+        <input
+          class="input-box"
+          name="input-box"
+          type="text"
+          placeholder="add to do..."
+        />
+        <button class="clear-all-btn">Clear all</button>
       </form>
 
-      <!-- list of tasks -->
-      <div class="task-list">
-        <li class="task">walk dog</li>
-      </div>
-
+      <!-- list of tasks(output) -->
+      <ul class="task-list"></ul>
     </div>
   </body>
 </html>
